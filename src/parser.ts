@@ -107,14 +107,14 @@ export class Parser {
   /**
    * Get the grammar (for testing/debugging)
    */
-  getGrammar() {
+  getGrammar(): any {
     return grammar;
   }
 
   /**
    * Get the semantics (for extending)
    */
-  getSemantics() {
+  getSemantics(): any {
     return semantics;
   }
 }
@@ -167,4 +167,4 @@ ${pointer}`;
 }
 
 // Export a default parser instance
-export const defaultParser = new Parser();
+export const defaultParser: Parser = new Parser();
