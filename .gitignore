@@ -2,3 +2,6 @@
 !.gitignore
 *.local.*
 working
+
+# Auto-generated files
+src/grammar-embedded.ts

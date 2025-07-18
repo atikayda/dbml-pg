@@ -1,6 +1,6 @@
 {
   "name": "@atikayda/dbml-pg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "assets/dbml-pg.webp",
   "description": "Parse any valid DBML file and leverage additional PostgreSQL-specific features",
   "license": "MIT",
@@ -48,7 +48,9 @@
     "fmt": "deno fmt",
     "lint": "deno lint",
     "check": "deno check mod.ts",
-    "publish": "deno publish"
+    "embed-grammar": "deno run --allow-read --allow-write scripts/embed-grammar.ts",
+    "prepublish": "deno task embed-grammar && deno task check",
+    "publish": "deno task prepublish && deno publish"
   },
   "fmt": {
     "useTabs": false,

@@ -5,12 +5,8 @@
 
 import * as ohm from "ohm-js";
 import { createSemantics } from "./semantics.ts";
+import { grammarSource } from "./grammar-embedded.ts";
 import type { Schema } from "./types.ts";
-
-// Read the grammar file
-const grammarSource = await Deno.readTextFile(
-  new URL("./dbml.ohm", import.meta.url)
-);
 
 // Create the grammar
 const grammar = ohm.grammar(grammarSource);
