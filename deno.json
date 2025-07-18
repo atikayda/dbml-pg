@@ -40,7 +40,8 @@
     "exclude": [
       "**/*_test.ts",
       "tests/**",
-      "examples/**"
+      "examples/**",
+      "!src/grammar-embedded.ts"
     ]
   },
   "tasks": {
